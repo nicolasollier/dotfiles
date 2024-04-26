@@ -26,6 +26,9 @@ local use = require('packer').use
 -- Packer can manage itself.
 use('wbthomason/packer.nvim')
 
+-- Theme
+use "folke/tokyonight.nvim"
+
 -- Commenting support.
 use('tpope/vim-commentary')
 
