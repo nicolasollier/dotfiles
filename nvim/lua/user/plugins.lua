@@ -239,6 +239,27 @@ use({
   end,
 })
 
+-- Indent Blankline
+use({
+  'lukas-reineke/indent-blankline.nvim',
+  filetype_exclude = {
+    'help',
+    'terminal',
+    'dashboard',
+    'packer',
+    'lspinfo',
+    'TelescopePrompt',
+    'TelescopeResults',
+  },
+  buftype_exclude = {
+    'terminal',
+    'NvimTree',
+  },
+  config = function()
+    require("ibl").setup()
+  end,
+})
+
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
 if packer_bootstrap then
