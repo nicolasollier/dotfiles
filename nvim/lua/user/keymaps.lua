@@ -27,3 +27,9 @@ vim.keymap.set('i', ',,', '<Esc>A,')
 -- Quickly clear search highlighting.
 vim.keymap.set('n', '<Leader>k', ':nohlsearch<CR>')
 
+-- Map Tab to navigate to the next tab
+vim.api.nvim_set_keymap('n', '<Tab>', ':BufferLineCycleNext<CR>', {noremap = true, silent = true})
+-- Map Shift+Tab to navigate to the previous tab
+vim.api.nvim_set_keymap('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', {noremap = true, silent = true})
+-- Map Ctrl+w to close the current buffer/tab
+vim.api.nvim_set_keymap('n', '<Leader>x', ':bd<CR>', {noremap = true, silent = true})
